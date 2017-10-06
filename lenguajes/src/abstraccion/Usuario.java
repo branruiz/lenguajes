@@ -19,4 +19,8 @@ private float altura;
     public void setAltura(float altura) {
         this.altura = altura;
     }
+
+    public void getPeso(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
