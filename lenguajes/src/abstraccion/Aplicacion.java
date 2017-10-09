@@ -97,8 +97,12 @@ public class Aplicacion extends javax.swing.JFrame {
     //    pk.peso=70;   Forma incorrecta 
     //    pk.altura=1.68f;     
     
-    pk.setPeso(70);
-    pk.setAltura(1.60f);
+    //primero pedimos el valor de texto al primer campo
+    float peso=Float.parseFloat(textoPeso.getText());
+    pk.setPeso(peso);
+    //hacemos lo mismo paa la altura
+    float altura=Float.parseFloat(textoAltura.getText());
+            pk.setAltura(1.60f);
         Imc modelo=new Imc();
         modelo.u=pk;
         
