@@ -3,9 +3,9 @@ package cuestionario;
 public class Opcion {
     
 private String titulo;
-private boolean correcta;
+boolean correcta;
 
-    public Opcion(String titulo, boolean correcta) {
+    public  Opcion(String titulo, boolean correcta) {
         this.titulo = titulo;
         this.correcta = correcta;
     }
