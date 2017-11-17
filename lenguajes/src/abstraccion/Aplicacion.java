@@ -96,19 +96,27 @@ public class Aplicacion extends javax.swing.JFrame {
         Usuario pk=new Usuario();
     //    pk.peso=70;   Forma incorrecta 
     //    pk.altura=1.68f;     
-    
+    try  {
     //primero pedimos el valor de texto al primer campo
     float peso=Float.parseFloat(textoPeso.getText());
+    Validaciones.validarNumeroNoNegativo(peso);
+    
     pk.setPeso(peso);
     //hacemos lo mismo paa la altura
     float altura=Float.parseFloat(textoAltura.getText());
-            pk.setAltura(1.60f);
+    Validaciones.validarNumeroNoNegativo(altura);
+    pk.setAltura(altura);
+            
         Imc modelo=new Imc();
         modelo.u=pk;
         
         etiqueta.setText(modelo.calcular());
         
-        
+    }catch(Exception e){
+        etiqueta.setText(e.getMessage());
+    
+    }
+    
     }//GEN-LAST:event_botoncitoActionPerformed
 
     /**
